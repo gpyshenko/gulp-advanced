@@ -1,0 +1,25 @@
+{% extends "base/base.njk" %}
+{% block styles %}
+    {# Стили на этой странице - Начало #}
+    {# {% for file in ['slick','slick-theme'] %}
+        <link rel="stylesheet" href="{{ 'vendors/' + file + '.css' }}">
+    {% endfor %} #}
+   
+    {% for file in ['components/pagination/pagination'] %}
+        <link rel="stylesheet" href="{{ 'templates/' + file + '.css' }}">
+    {% endfor %}
+    {# Стили на этой странице - Конец #}
+{% endblock %}
+
+{% block main %}
+    <h1>Index page</h1>
+    {% include "components/pagination/pagination.njk" %}
+{% endblock  %}
+
+{% block scripts %}
+    {# Скрипты на этой странице - Начало #}
+    {% for file in ['index'] %}
+        <script src="{{ 'scripts/' + file + '.js' }}"></script>
+    {% endfor %}
+    {# Скрипты на этой странице - Конец #}
+{% endblock %}
