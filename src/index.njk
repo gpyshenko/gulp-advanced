@@ -18,7 +18,10 @@
 
 {% block scripts %}
     {# Скрипты на этой странице - Начало #}
-    {% for file in ['index','plugin.jquery'] %}
+    {% for file in ['jquery'] %}
+        <script src="{{ 'scripts/vendors/' + file + '.js' }}"></script>
+    {% endfor %}
+    {% for file in ['index'] %}
         <script src="{{ 'scripts/' + file + '.js' }}"></script>
     {% endfor %}
     {# Скрипты на этой странице - Конец #}

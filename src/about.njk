@@ -8,17 +8,26 @@
     {% for file in ['components/pagination/pagination'] %}
         <link rel="stylesheet" href="{{ 'templates/' + file + '.css' }}">
     {% endfor %}
+    <link rel="stylesheet" href="styles/vendors/slick-carousel.css">
     {# Стили на этой странице - Конец #}
 {% endblock %}
 
 {% block main %}
     <h1>About page</h1>
     {% include "components/pagination/pagination.njk" %}
-    <div id="lightgallery"></div>
+    <div class="slider">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
 {% endblock  %}
 
 {% block scripts %}
     {# Скрипты на этой странице - Начало #}
+    {% for file in ['jquery','slick-carousel'] %}
+        <script src="{{ 'scripts/vendors/' + file + '.js' }}"></script>
+    {% endfor %}
+
     {% for file in ['about'] %}
         <script src="{{ 'scripts/' + file + '.js' }}"></script>
     {% endfor %}
