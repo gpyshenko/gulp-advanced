@@ -18,7 +18,7 @@
 
 {% block scripts %}
     {# Скрипты на этой странице - Начало #}
-    {% for file in ['index'] %}
+    {% for file in ['index','plugin.jquery'] %}
         <script src="{{ 'scripts/' + file + '.js' }}"></script>
     {% endfor %}
     {# Скрипты на этой странице - Конец #}
